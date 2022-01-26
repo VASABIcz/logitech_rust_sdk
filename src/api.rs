@@ -10,7 +10,7 @@ pub const LOGI_DEVICETYPE_RGB: i32 = 1 << LOGI_DEVICETYPE_RGB_ORD;
 pub const LOGI_DEVICETYPE_PERKEY_RGB: i32 = 1 << LOGI_DEVICETYPE_PERKEY_RGB_ORD;
 pub const LOGI_DEVICETYPE_ALL: i32 = LOGI_DEVICETYPE_MONOCHROME | LOGI_DEVICETYPE_RGB | LOGI_DEVICETYPE_PERKEY_RGB;
 
-#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name=r"C:\Users\microsft_is_gay\IdeaProjects\logitech_binding\src\lib\LogitechLEDLib", kind="static"))]
+#[cfg_attr(all(target_os = "windows", target_env = "msvc"), link(name=r"./src/lib/LogitechLEDLib", kind="static"))]
 extern "cdecl" {
     #[link_name = "?LogiLedInit@@YA_NXZ"]
     fn Init() -> bool;
